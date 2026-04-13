@@ -1,6 +1,3 @@
-// app/page.tsx
-import './css/styles.css'; // <-- Adjust path if your CSS is elsewhere
-
 export default function Home() {
   return (
     <>
