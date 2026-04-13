@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surety Bond Cost — How Much Does a Surety Bond Cost?</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" class="logo-svg">
+        <circle cx="28" cy="35" r="20" fill="none" stroke="#1e3a8a" stroke-width="6"/>
+        <circle cx="52" cy="35" r="20" fill="none" stroke="#2563eb" stroke-width="6"/>
+        <path d="M40 15 A20 20 0 0 1 40 55" fill="none" stroke="#1e3a8a" stroke-width="6"/>
+        <path d="M40 15 A20 20 0 0 0 40 55" fill="none" stroke="#2563eb" stroke-width="6"/>
+        <text x="82" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1e3a8a">SuretyBond</text>
+        <text x="82" y="44" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#64748b">Simple</text>
+        <text x="82" y="60" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="1">trusted. connected. fast.</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="quote.html">Get a Quote</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="quote.html" class="nav-cta">Get a Free Quote</a>
+  </nav>
+
+  <!-- LEARN SUB-NAV -->
+  <div class="learn-subnav">
+    <div class="learn-subnav-inner">
+      <a href="learn.html">What Is a Surety Bond?</a>
+      <a href="bond-cost.html" class="active">Bond Cost &amp; Calculator</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="learn-hero">
+    <div class="learn-hero-content">
+      <span class="learn-badge">💰 Bond Cost Guide</span>
+      <h1>How Much Does a Surety Bond Cost?</h1>
+      <p>You don't pay the full bond amount — you pay a small premium. Use our calculator to estimate your cost instantly.</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="learn-page">
+    <div class="learn-layout">
+
+      <!-- SIDEBAR NAV -->
+      <aside class="learn-sidebar">
+        <nav class="sidebar-nav">
+          <h4>On This Page</h4>
+          <a href="#calculator">Cost Calculator</a>
+          <a href="#how-cost-works">How Pricing Works</a>
+          <a href="#credit-score">Credit Score Impact</a>
+          <a href="#rate-table">Rate Table</a>
+          <a href="#examples">Cost Examples</a>
+          <a href="#lower-cost">How to Lower Your Cost</a>
+          <a href="#cost-faq">FAQ</a>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="learn-content">
+
+        <!-- INTERACTIVE CALCULATOR -->
+        <section id="calculator">
+          <h2>Surety Bond Cost Calculator</h2>
+          <p>Get an instant estimate of your surety bond premium. Enter your details below:</p>
+
+          <div class="calculator-card">
+            <div class="calc-row">
+              <div class="calc-field">
+                <label for="calcBondAmount">Bond Amount</label>
+                <div class="currency-input">
+                  <span class="currency-symbol">$</span>
+                  <input type="text" id="calcBondAmount" placeholder="e.g. 50,000" />
+                </div>
+              </div>
+              <div class="calc-field">
+                <label for="calcCreditScore">Credit Score Range</label>
+                <select id="calcCreditScore">
+                  <option value="">— Select —</option>
+                  <option value="excellent">750+ (Excellent)</option>
+                  <option value="good">700–749 (Good)</option>
+                  <option value="fair">650–699 (Fair)</option>
+                  <option value="average">600–649 (Average)</option>
+                  <option value="poor">550–599 (Below Average)</option>
+                  <option value="bad">Below 550 (Poor)</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn btn-green btn-calc" onclick="calculateCost()">Calculate My Cost</button>
+
+            <!-- RESULTS -->
+            <div class="calc-results" id="calcResults" style="display: none;">
+              <div class="calc-result-header">
+                <h3>Your Estimated Annual Premium</h3>
+              </div>
+              <div class="calc-result-grid">
+                <div class="calc-result-box calc-result-main">
+                  <span class="calc-result-label">Estimated Premium</span>
+                  <span class="calc-result-value" id="calcPremium">$0</span>
+                  <span class="calc-result-sub">per year</span>
+                </div>
+                <div class="calc-result-box">
+                  <span class="calc-result-label">Bond Amount</span>
+                  <span class="calc-result-value calc-result-small" id="calcBondDisplay">$0</span>
+                </div>
+                <div class="calc-result-box">
+                  <span class="calc-result-label">Your Rate</span>
+                  <span class="calc-result-value calc-result-small" id="calcRateDisplay">0%</span>
+                </div>
+                <div class="calc-result-box">
+                  <span class="calc-result-label">Per Month</span>
+                  <span class="calc-result-value calc-result-small" id="calcMonthly">$0</span>
+                </div>
+              </div>
+              <div class="calc-result-range" id="calcRange"></div>
+              <div class="calc-result-cta">
+                <p>Want an exact quote based on your specific situation?</p>
+                <a href="quote.html" class="btn btn-green">Get Your Free Quote</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW COST WORKS -->
+        <section id="how-cost-works">
+          <h2>How Surety Bond Pricing Works</h2>
+          <p>A surety bond premium is the amount you <strong>actually pay</strong> — it's a small percentage of the total bond amount. You do NOT pay the full bond amount.</p>
+
+          <div class="pricing-visual">
+            <div class="pricing-visual-item">
+              <div class="pricing-icon">📄</div>
+              <div class="pricing-label">Bond Amount</div>
+              <div class="pricing-value">$50,000</div>
+              <div class="pricing-desc">The total coverage — what the bond protects</div>
+            </div>
+            <div class="pricing-visual-arrow">×</div>
+            <div class="pricing-visual-item">
+              <div class="pricing-icon">📊</div>
+              <div class="pricing-label">Your Rate</div>
+              <div class="pricing-value">1–3%</div>
+              <div class="pricing-desc">Based on credit, financials & bond type</div>
+            </div>
+            <div class="pricing-visual-arrow">=</div>
+            <div class="pricing-visual-item pricing-visual-highlight">
+              <div class="pricing-icon">💵</div>
+              <div class="pricing-label">You Pay</div>
+              <div class="pricing-value">$500–$1,500</div>
+              <div class="pricing-desc">Your annual premium — that's it!</div>
+            </div>
+          </div>
+
+          <div class="learn-callout learn-callout-blue">
+            <strong>Think of it this way:</strong> The bond amount is like the coverage on an insurance policy. Your premium is the small cost you pay to have that coverage in place. The better your credit and financials, the less you pay.
+          </div>
+        </section>
+
+        <!-- CREDIT SCORE IMPACT -->
+        <section id="credit-score">
+          <h2>How Your Credit Score Affects Cost</h2>
+          <p>Your credit score is the <strong>single biggest factor</strong> in determining your surety bond premium. Here's why:</p>
+
+          <div class="credit-tiers">
+            <div class="credit-tier tier-excellent">
+              <div class="tier-score">750+</div>
+              <div class="tier-info">
+                <h4>Excellent Credit</h4>
+                <p>You'll qualify for the lowest rates available. Most bonds can be issued instantly with minimal paperwork.</p>
+                <div class="tier-rate">Typical rate: <strong>0.5%–2%</strong></div>
+              </div>
+            </div>
+            <div class="credit-tier tier-good">
+              <div class="tier-score">700–749</div>
+              <div class="tier-info">
+                <h4>Good Credit</h4>
+                <p>Still very competitive rates. You'll qualify for standard programs with most surety companies.</p>
+                <div class="tier-rate">Typical rate: <strong>1%–3%</strong></div>
+              </div>
+            </div>
+            <div class="credit-tier tier-fair">
+              <div class="tier-score">650–699</div>
+              <div class="tier-info">
+                <h4>Fair Credit</h4>
+                <p>Rates are higher but still reasonable. Some additional documentation may be required.</p>
+                <div class="tier-rate">Typical rate: <strong>2%–5%</strong></div>
+              </div>
+            </div>
+            <div class="credit-tier tier-average">
+              <div class="tier-score">600–649</div>
+              <div class="tier-info">
+                <h4>Average Credit</h4>
+                <p>You'll still qualify, but through specialized programs. Rates reflect the higher risk.</p>
+                <div class="tier-rate">Typical rate: <strong>4%–8%</strong></div>
+              </div>
+            </div>
+            <div class="credit-tier tier-poor">
+              <div class="tier-score">550–599</div>
+              <div class="tier-info">
+                <h4>Below Average Credit</h4>
+                <p>Bad credit programs are available. You can still get bonded — premiums will be higher.</p>
+                <div class="tier-rate">Typical rate: <strong>7%–12%</strong></div>
+              </div>
+            </div>
+            <div class="credit-tier tier-bad">
+              <div class="tier-score">&lt;550</div>
+              <div class="tier-info">
+                <h4>Poor Credit</h4>
+                <p>High-risk programs exist for all credit levels. Collateral may be required in some cases.</p>
+                <div class="tier-rate">Typical rate: <strong>10%–15%</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RATE TABLE -->
+        <section id="rate-table">
+          <h2>Surety Bond Rate Table</h2>
+          <p>Use this table to estimate your annual premium based on your bond amount and credit score:</p>
+
+          <div class="compare-table-wrap">
+            <table class="compare-table rate-table">
+              <thead>
+                <tr>
+                  <th>Bond Amount</th>
+                  <th>Excellent (750+)</th>
+                  <th>Good (700–749)</th>
+                  <th>Fair (650–699)</th>
+                  <th>Average (600–649)</th>
+                  <th>Poor (&lt;600)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>$5,000</strong></td>
+                  <td>$50–$75</td>
+                  <td>$75–$150</td>
+                  <td>$150–$250</td>
+                  <td>$250–$400</td>
+                  <td>$400–$750</td>
+                </tr>
+                <tr>
+                  <td><strong>$10,000</strong></td>
+                  <td>$100–$150</td>
+                  <td>$150–$300</td>
+                  <td>$300–$500</td>
+                  <td>$500–$800</td>
+                  <td>$800–$1,500</td>
+                </tr>
+                <tr>
+                  <td><strong>$25,000</strong></td>
+                  <td>$250–$375</td>
+                  <td>$375–$750</td>
+                  <td>$750–$1,250</td>
+                  <td>$1,250–$2,000</td>
+                  <td>$2,000–$3,750</td>
+                </tr>
+                <tr>
+                  <td><strong>$50,000</strong></td>
+                  <td>$500–$750</td>
+                  <td>$750–$1,500</td>
+                  <td>$1,500–$2,500</td>
+                  <td>$2,500–$4,000</td>
+                  <td>$4,000–$7,500</td>
+                </tr>
+                <tr>
+                  <td><strong>$75,000</strong></td>
+                  <td>$750–$1,125</td>
+                  <td>$1,125–$2,250</td>
+                  <td>$2,250–$3,750</td>
+                  <td>$3,750–$6,000</td>
+                  <td>$6,000–$11,250</td>
+                </tr>
+                <tr>
+                  <td><strong>$100,000</strong></td>
+                  <td>$1,000–$1,500</td>
+                  <td>$1,500–$3,000</td>
+                  <td>$3,000–$5,000</td>
+                  <td>$5,000–$8,000</td>
+                  <td>$8,000–$15,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="learn-callout learn-callout-amber">
+            <strong>Note:</strong> These are estimated ranges. Your actual premium may vary based on your specific financial situation, industry, bond type, and the surety company's underwriting. Get a personalized quote for an exact rate.
+          </div>
+        </section>
+
+        <!-- COST EXAMPLES -->
+        <section id="examples">
+          <h2>Real-World Cost Examples</h2>
+          <p>Here's what real bond premiums look like for common bond types:</p>
+
+          <div class="example-cards">
+            <div class="example-card">
+              <div class="example-header">
+                <span class="example-icon">🚗</span>
+                <h4>Auto Dealer Bond — Texas</h4>
+              </div>
+              <div class="example-details">
+                <div class="example-row">
+                  <span>Bond Amount:</span>
+                  <strong>$50,000</strong>
+                </div>
+                <div class="example-row">
+                  <span>Credit Score:</span>
+                  <strong>720 (Good)</strong>
+                </div>
+                <div class="example-row">
+                  <span>Rate:</span>
+                  <strong>1.5%</strong>
+                </div>
+                <div class="example-row example-total">
+                  <span>Annual Premium:</span>
+                  <strong>$750/year</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <div class="example-header">
+                <span class="example-icon">🔨</span>
+                <h4>Contractor Bond — California</h4>
+              </div>
+              <div class="example-details">
+                <div class="example-row">
+                  <span>Bond Amount:</span>
+                  <strong>$25,000</strong>
+                </div>
+                <div class="example-row">
+                  <span>Credit Score:</span>
+                  <strong>680 (Fair)</strong>
+                </div>
+                <div class="example-row">
+                  <span>Rate:</span>
+                  <strong>3%</strong>
+                </div>
+                <div class="example-row example-total">
+                  <span>Annual Premium:</span>
+                  <strong>$750/year</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <div class="example-header">
+                <span class="example-icon">📝</span>
+                <h4>Notary Bond — Florida</h4>
+              </div>
+              <div class="example-details">
+                <div class="example-row">
+                  <span>Bond Amount:</span>
+                  <strong>$7,500</strong>
+                </div>
+                <div class="example-row">
+                  <span>Credit Score:</span>
+                  <strong>Any</strong>
+                </div>
+                <div class="example-row">
+                  <span>Rate:</span>
+                  <strong>Flat fee</strong>
+                </div>
+                <div class="example-row example-total">
+                  <span>4-Year Premium:</span>
+                  <strong>$50–$100</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-card">
+              <div class="example-header">
+                <span class="example-icon">🚛</span>
+                <h4>Freight Broker Bond — Nationwide</h4>
+              </div>
+              <div class="example-details">
+                <div class="example-row">
+                  <span>Bond Amount:</span>
+                  <strong>$75,000</strong>
+                </div>
+                <div class="example-row">
+                  <span>Credit Score:</span>
+                  <strong>750+ (Excellent)</strong>
+                </div>
+                <div class="example-row">
+                  <span>Rate:</span>
+                  <strong>1.2%</strong>
+                </div>
+                <div class="example-row example-total">
+                  <span>Annual Premium:</span>
+                  <strong>$900/year</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW TO LOWER COST -->
+        <section id="lower-cost">
+          <h2>5 Ways to Lower Your Surety Bond Cost</h2>
+
+          <div class="tips-list">
+            <div class="tip-item">
+              <div class="tip-num">1</div>
+              <div>
+                <h4>Improve Your Credit Score</h4>
+                <p>Even a 50-point improvement can significantly reduce your premium. Pay down balances, resolve collections, and ensure your report is accurate.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-num">2</div>
+              <div>
+                <h4>Shop Multiple Surety Companies</h4>
+                <p>Different sureties have different risk appetites. A rate that's 5% at one company might be 2% at another. Work with an agency that shops multiple carriers.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-num">3</div>
+              <div>
+                <h4>Maintain a Clean Claims History</h4>
+                <p>Every claim-free year makes you a better risk. Sureties reward principals with no claims history through lower premiums at renewal.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-num">4</div>
+              <div>
+                <h4>Strengthen Your Financials</h4>
+                <p>For larger bonds, strong financial statements (positive net worth, good liquidity) can help reduce your rate significantly.</p>
+              </div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-num">5</div>
+              <div>
+                <h4>Renew Early & Build Relationships</h4>
+                <p>Renewing before your bond expires and staying with the same surety can earn you loyalty discounts over time.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="cost-faq">
+          <h2>Bond Cost FAQ</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Do I have to pay the full bond amount?</summary>
+              <p><strong>No.</strong> You only pay a premium, which is typically 1–15% of the bond amount. For example, a $50,000 bond with good credit might cost you just $500–$1,500 per year.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is the premium a one-time payment or annual?</summary>
+              <p>Most surety bond premiums are <strong>annual</strong> — you pay once per year to keep your bond active. Some bonds (like notary bonds) have multi-year terms where you pay once for the full term.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I get a bond with bad credit?</summary>
+              <p><strong>Yes!</strong> There are surety programs for all credit levels. You'll pay a higher premium (typically 5–15%), but bonds are available for almost everyone. Some programs don't even require a credit check for smaller bonds.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do I get my premium back if no claims are filed?</summary>
+              <p><strong>No.</strong> The premium is the cost of the surety company's guarantee. It is not refundable, similar to how car insurance premiums work. However, if you cancel your bond mid-term, you may receive a partial refund for the unused portion.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Why do rates vary so much between companies?</summary>
+              <p>Each surety company has different underwriting criteria, risk appetites, and pricing models. Some specialize in certain bond types or industries, which allows them to offer better rates. That's why it pays to shop around.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Are there any additional fees?</summary>
+              <p>Reputable surety bond providers do <strong>not</strong> charge hidden fees. Your premium is your total cost. Be wary of companies that add "processing fees" or "service charges" on top of the premium.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Will applying for a bond affect my credit score?</summary>
+              <p>Most surety companies perform a <strong>soft credit pull</strong>, which does NOT affect your credit score. Only in rare cases (typically for very large bonds) might a hard inquiry be needed.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="learn-cta">
+          <h2>Ready to Find Out Your Exact Cost?</h2>
+          <p>Get a personalized, no-obligation quote in minutes. No hidden fees, no hard credit pull.</p>
+          <a href="quote.html" class="btn btn-green btn-lg">Get Your Free Quote</a>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" class="logo-svg logo-footer">
+          <circle cx="28" cy="35" r="20" fill="none" stroke="#ffffff" stroke-width="6"/>
+          <circle cx="52" cy="35" r="20" fill="none" stroke="#93c5fd" stroke-width="6"/>
+          <path d="M40 15 A20 20 0 0 1 40 55" fill="none" stroke="#ffffff" stroke-width="6"/>
+          <path d="M40 15 A20 20 0 0 0 40 55" fill="none" stroke="#93c5fd" stroke-width="6"/>
+          <text x="82" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">SuretyBond</text>
+          <text x="82" y="44" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#93c5fd">Simple</text>
+          <text x="82" y="60" font-family="Arial, sans-serif" font-size="9" fill="#64748b" letter-spacing="1">trusted. connected. fast.</text>
+        </svg>
+        <p>Surety Made Simple</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="learn.html">Learn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SuretyBond Simple. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/bond-cost.js"></script>
+</body>
+</html>

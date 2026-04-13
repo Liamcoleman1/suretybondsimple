@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote — SuretyBond Simple</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" class="logo-svg">
+        <circle cx="28" cy="35" r="20" fill="none" stroke="#1e3a8a" stroke-width="6"/>
+        <circle cx="52" cy="35" r="20" fill="none" stroke="#2563eb" stroke-width="6"/>
+        <path d="M40 15 A20 20 0 0 1 40 55" fill="none" stroke="#1e3a8a" stroke-width="6"/>
+        <path d="M40 15 A20 20 0 0 0 40 55" fill="none" stroke="#2563eb" stroke-width="6"/>
+        <text x="82" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1e3a8a">SuretyBond</text>
+        <text x="82" y="44" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#64748b">Simple</text>
+        <text x="82" y="60" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="1">trusted. connected. fast.</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="quote.html">Get a Quote</a>
+  <a href="learn.html">Learn</a>
+  <a href="states.html">Bonds by State</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+    <div class="nav-actions">
+      <a href="tel:+18005551234" class="nav-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (800) 555-1234
+      </a>
+      <a href="quote.html" class="btn btn-green nav-cta">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- QUOTE FORM -->
+  <main class="quote-page">
+    <div class="quote-container">
+
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="step-dot">1</div><span>State</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <div class="step-dot">2</div><span>Bond</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <div class="step-dot">3</div><span>Date</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <div class="step-dot">4</div><span>Contact</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="5">
+          <div class="step-dot">5</div><span>Principal</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="6">
+          <div class="step-dot">6</div><span>Review</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: STATE -->
+      <section class="form-step active" id="step-1">
+        <h2>Where are you located?</h2>
+        <p class="step-desc">Select the state where the bond is needed.</p>
+        <div class="field-group">
+          <label for="state">State <span class="required">*</span></label>
+          <select id="state" required>
+            <option value="">— Select a State —</option>
+          </select>
+          <span class="field-error" id="state-error"></span>
+        </div>
+        <button class="btn btn-green" onclick="nextStep(1)">Continue</button>
+      </section>
+
+      <!-- STEP 2: BOND TYPE + SUB-TYPE + DETAILS + AMOUNT -->
+      <section class="form-step" id="step-2">
+        <h2>What bond do you need?</h2>
+        <p class="step-desc">Choose the type of surety bond required.</p>
+        <div class="field-group">
+          <label for="bondType">Bond Type <span class="required">*</span></label>
+          <select id="bondType" required>
+            <option value="">— Select a Bond Type —</option>
+            <option>Contractor License Bond</option>
+            <option>Motor Vehicle Dealer Bond</option>
+            <option>Notary Bond</option>
+            <option>License &amp; Permit Bond</option>
+            <option>Court Bond</option>
+            <option>ERISA / Fidelity Bond</option>
+            <option>Freight Broker Bond (BMC-84)</option>
+            <option>Mortgage Broker Bond</option>
+            <option>Tax Preparer Bond</option>
+            <option>Title Bond</option>
+            <option>Wage and Welfare Bond</option>
+            <option>Other / Not Sure</option>
+          </select>
+          <span class="field-error" id="bond-error"></span>
+        </div>
+
+        <!-- SUB-TYPE -->
+        <div class="field-group" id="bondSubTypeGroup" style="display: none;">
+          <label for="bondSubType" id="bondSubTypeLabel">Dealer Type <span class="required">*</span></label>
+          <select id="bondSubType" required>
+            <option value="">— Select —</option>
+          </select>
+          <span class="field-error" id="subtype-error"></span>
+        </div>
+
+        <!-- OBLIGEE -->
+        <div class="field-group" id="bondObligeeGroup" style="display: none;">
+          <label for="bondObligee">Who Is Requiring This Bond? <span class="required">*</span></label>
+          <input type="text" id="bondObligee" placeholder="e.g. City of Los Angeles, State DMV, County Court" />
+          <span class="field-hint">Enter the name of the government agency, court, or entity requiring this bond.</span>
+          <span class="field-error" id="obligee-error"></span>
+        </div>
+
+        <!-- BOND DESCRIPTION -->
+        <div class="field-group" id="bondDescGroup" style="display: none;">
+          <label for="bondDesc">Bond Description</label>
+          <textarea id="bondDesc" rows="3" placeholder="e.g. Janitorial service bond required by the county for our cleaning business license..."></textarea>
+          <span class="field-hint">Describe the bond you need or paste any details from the entity that's requiring it.</span>
+        </div>
+
+        <!-- BOND AMOUNT -->
+        <div class="field-group" id="bondAmountGroup" style="display: none;">
+          <label for="bondAmount" id="bondAmountLabel">Bond Amount <span class="required">*</span></label>
+          <div class="currency-input">
+            <span class="currency-symbol">$</span>
+            <input type="text" id="bondAmount" placeholder="e.g. 25,000" required />
+          </div>
+          <span class="field-hint" id="bondAmountNote">Enter the total bond amount required.</span>
+          <span class="field-error" id="amount-error"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-outline" onclick="prevStep(2)">Back</button>
+          <button class="btn btn-green" onclick="nextStep(2)">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 3: EFFECTIVE DATE -->
+      <section class="form-step" id="step-3">
+        <h2>Desired Effective Date</h2>
+        <p class="step-desc">When do you need the bond to start?</p>
+        <div class="field-group">
+          <label for="effectiveDate">Effective Date <span class="required">*</span></label>
+          <input type="date" id="effectiveDate" required />
+          <span class="field-error" id="date-error"></span>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-outline" onclick="prevStep(3)">Back</button>
+          <button class="btn btn-green" onclick="nextStep(3)">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 4: CONTACT INFO -->
+      <section class="form-step" id="step-4">
+        <h2>Contact Information</h2>
+        <p class="step-desc">We'll use this to send you your quote.</p>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="firstName">First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" placeholder="John" required />
+            <span class="field-error" id="fname-error"></span>
+          </div>
+          <div class="field-group">
+            <label for="lastName">Last Name <span class="required">*</span></label>
+            <input type="text" id="lastName" placeholder="Doe" required />
+            <span class="field-error" id="lname-error"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="phone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="phone" placeholder="(555) 123-4567" required />
+          <span class="field-error" id="phone-error"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="you@gmail.com" required />
+          <span class="field-error" id="email-error"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-outline" onclick="prevStep(4)">Back</button>
+          <button class="btn btn-green" onclick="nextStep(4)">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 5: PRINCIPAL INFORMATION -->
+      <section class="form-step" id="step-5">
+        <h2>Principal Information</h2>
+        <p class="step-desc">This is the name and address that will appear on the bond.</p>
+
+        <!-- Individual or Company -->
+        <div class="field-group">
+          <label>Principal Type <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-card" for="principalIndividual">
+              <input type="radio" id="principalIndividual" name="principalType" value="Individual" />
+              <div class="radio-card-content">
+                <span class="radio-icon">👤</span>
+                <div>
+                  <strong>Individual</strong>
+                  <p>Bond will be in your personal name</p>
+                </div>
+              </div>
+            </label>
+            <label class="radio-card" for="principalCompany">
+              <input type="radio" id="principalCompany" name="principalType" value="Company" />
+              <div class="radio-card-content">
+                <span class="radio-icon">🏢</span>
+                <div>
+                  <strong>Company / Business</strong>
+                  <p>Bond will be in your business name</p>
+                </div>
+              </div>
+            </label>
+          </div>
+          <span class="field-error" id="principalType-error"></span>
+        </div>
+
+        <!-- Company Name — only if Company selected -->
+        <div class="field-group" id="companyNameGroup" style="display: none;">
+          <label for="companyName">Company / Business Name <span class="required">*</span></label>
+          <input type="text" id="companyName" placeholder="e.g. ABC Construction LLC" />
+          <span class="field-error" id="company-error"></span>
+        </div>
+
+        <!-- Principal Name (always shown) -->
+        <div class="field-group" id="principalNameGroup" style="display: none;">
+          <label for="principalName" id="principalNameLabel">Full Legal Name on Bond <span class="required">*</span></label>
+          <input type="text" id="principalName" placeholder="e.g. John Michael Doe" />
+          <span class="field-hint" id="principalNameHint">Enter your full legal name as it should appear on the bond.</span>
+          <span class="field-error" id="principalName-error"></span>
+        </div>
+
+        <!-- Principal Address -->
+        <div id="principalAddressSection" style="display: none;">
+          <div class="field-group">
+            <label for="principalAddress">Street Address <span class="required">*</span></label>
+            <input type="text" id="principalAddress" placeholder="e.g. 123 Main Street, Suite 200" />
+            <span class="field-error" id="address-error"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="principalCity">City <span class="required">*</span></label>
+              <input type="text" id="principalCity" placeholder="e.g. Los Angeles" />
+              <span class="field-error" id="city-error"></span>
+            </div>
+            <div class="field-group">
+              <label for="principalState">State <span class="required">*</span></label>
+              <select id="principalState">
+                <option value="">— State —</option>
+              </select>
+              <span class="field-error" id="pstate-error"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="principalZip">ZIP Code <span class="required">*</span></label>
+              <input type="text" id="principalZip" placeholder="e.g. 90001" maxlength="10" />
+              <span class="field-error" id="zip-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-outline" onclick="prevStep(5)">Back</button>
+          <button class="btn btn-green" onclick="nextStep(5)">Continue to Review</button>
+        </div>
+      </section>
+
+      <!-- STEP 6: REVIEW -->
+      <section class="form-step" id="step-6">
+        <h2>Review Your Application</h2>
+        <p class="step-desc">Please review all details before submitting. Click any section to make changes.</p>
+
+        <div class="review-section" onclick="goToStep(1)">
+          <div class="review-header">
+            <h4>📍 Location</h4>
+            <span class="review-edit">Edit</span>
+          </div>
+          <div class="review-body">
+            <div class="review-row">
+              <span>State:</span>
+              <strong id="reviewState"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-section" onclick="goToStep(2)">
+          <div class="review-header">
+            <h4>📋 Bond Details</h4>
+            <span class="review-edit">Edit</span>
+          </div>
+          <div class="review-body">
+            <div class="review-row">
+              <span>Bond Type:</span>
+              <strong id="reviewBondType"></strong>
+            </div>
+            <div class="review-row" id="reviewSubTypeRow" style="display: none;">
+              <span>Sub-Type:</span>
+              <strong id="reviewSubType"></strong>
+            </div>
+            <div class="review-row" id="reviewObligeeRow" style="display: none;">
+              <span>Required By:</span>
+              <strong id="reviewObligee"></strong>
+            </div>
+            <div class="review-row" id="reviewDescRow" style="display: none;">
+              <span>Description:</span>
+              <strong id="reviewDesc"></strong>
+            </div>
+            <div class="review-row">
+              <span>Bond Amount:</span>
+              <strong id="reviewAmount"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-section" onclick="goToStep(3)">
+          <div class="review-header">
+            <h4>📅 Effective Date</h4>
+            <span class="review-edit">Edit</span>
+          </div>
+          <div class="review-body">
+            <div class="review-row">
+              <span>Start Date:</span>
+              <strong id="reviewDate"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-section" onclick="goToStep(4)">
+          <div class="review-header">
+            <h4>👤 Contact Information</h4>
+            <span class="review-edit">Edit</span>
+          </div>
+          <div class="review-body">
+            <div class="review-row">
+              <span>Name:</span>
+              <strong id="reviewContactName"></strong>
+            </div>
+            <div class="review-row">
+              <span>Phone:</span>
+              <strong id="reviewPhone"></strong>
+            </div>
+            <div class="review-row">
+              <span>Email:</span>
+              <strong id="reviewEmail"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-section" onclick="goToStep(5)">
+          <div class="review-header">
+            <h4>🏢 Principal Information</h4>
+            <span class="review-edit">Edit</span>
+          </div>
+          <div class="review-body">
+            <div class="review-row">
+              <span>Type:</span>
+              <strong id="reviewPrincipalType"></strong>
+            </div>
+            <div class="review-row" id="reviewCompanyRow" style="display: none;">
+              <span>Company:</span>
+              <strong id="reviewCompanyName"></strong>
+            </div>
+            <div class="review-row">
+              <span>Name on Bond:</span>
+              <strong id="reviewPrincipalName"></strong>
+            </div>
+            <div class="review-row">
+              <span>Address:</span>
+              <strong id="reviewAddress"></strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-agreement">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agreeTerms" />
+            <span>I confirm all the information above is accurate and I authorize SuretyBond Simple to process this application.</span>
+          </label>
+          <span class="field-error" id="agree-error"></span>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-outline" onclick="prevStep(6)">Back</button>
+          <button class="btn btn-green btn-lg" id="submitBtn" onclick="submitQuote()">Submit Application</button>
+        </div>
+      </section>
+
+      <!-- SUCCESS MESSAGE -->
+      <section class="form-step" id="step-success">
+        <div class="success-box">
+          <div class="success-icon">✅</div>
+          <h2>Application Submitted!</h2>
+          <p>Thank you! We've received your application and will be in touch shortly with your quote.</p>
+          <p class="success-sub">📧 A confirmation has been sent to your email.</p>
+          <a href="index.html" class="btn btn-green">Back to Home</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 SuretyBond Simple. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/quote.js"></script>
+</body>
+</html>

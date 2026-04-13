@@ -1,0 +1,343 @@
+{
+  "Motor Vehicle Dealer Bond": {
+    "Alabama": {
+      "options": [
+        { "label": "New Dealer", "amount": 25000 },
+        { "label": "Used Dealer", "amount": 10000 }
+      ]
+    },
+    "Alaska": {
+      "options": [
+        { "label": "Dealer", "amount": 50000 },
+        { "label": "Motorcycle Dealer", "amount": 25000 }
+      ]
+    },
+    "Arizona": {
+      "options": [
+        { "label": "General / Auction Dealer", "amount": 100000 },
+        { "label": "Wholesale Dealer", "amount": 25000 }
+      ]
+    },
+    "Arkansas": {
+      "options": [
+        { "label": "New Dealer", "amount": 50000 },
+        { "label": "Used / Wholesale Dealer", "amount": 25000 }
+      ]
+    },
+    "California": {
+      "options": [
+        { "label": "Retail Dealer", "amount": 50000 },
+        { "label": "Motorcycle / Wholesale Dealer", "amount": 10000 }
+      ]
+    },
+    "Colorado": { "amount": 50000, "note": "$50,000" },
+    "Connecticut": { "amount": 50000, "note": "$50,000 (dealer)" },
+    "Delaware": { "amount": 0, "note": "No dealer bond requirement" },
+    "District of Columbia": { "amount": 25000, "note": "$25,000" },
+    "Florida": {
+      "options": [
+        { "label": "Motor Vehicle Dealer", "amount": 25000 },
+        { "label": "RV Dealer", "amount": 10000 }
+      ]
+    },
+    "Georgia": { "amount": 35000, "note": "$35,000 (used dealer)" },
+    "Hawaii": {
+      "options": [
+        { "label": "New Dealer (10+ per month)", "amount": 200000 },
+        { "label": "New Dealer (under 10 per month)", "amount": 50000 },
+        { "label": "Used Dealer (60+ per month)", "amount": 100000 },
+        { "label": "Used Dealer (under 60 per month)", "amount": 25000 }
+      ]
+    },
+    "Idaho": {
+      "options": [
+        { "label": "Motor Vehicle Dealer", "amount": 20000 },
+        { "label": "Motorcycle / ATV Dealer", "amount": 10000 }
+      ]
+    },
+    "Illinois": { "amount": 50000, "note": "$50,000" },
+    "Indiana": { "amount": 25000, "note": "$25,000" },
+    "Iowa": { "amount": 75000, "note": "$75,000" },
+    "Kansas": { "amount": 30000, "note": "$30,000" },
+    "Kentucky": { "amount": 100000, "note": "Up to $100,000" },
+    "Louisiana": {
+      "options": [
+        { "label": "New Dealer", "amount": 20000 },
+        { "label": "Used Dealer", "amount": 10000 }
+      ]
+    },
+    "Maine": {
+      "options": [
+        { "label": "High Volume Dealer", "amount": 25000 },
+        { "label": "Low Volume Dealer", "amount": 5000 }
+      ]
+    },
+    "Maryland": { "amount": 25000, "note": "$25,000 (based on sales volume)" },
+    "Massachusetts": { "amount": 25000, "note": "$25,000 (Class II used car dealers)" },
+    "Michigan": { "amount": 10000, "note": "$10,000" },
+    "Minnesota": {
+      "options": [
+        { "label": "Motor Vehicle Dealer", "amount": 50000 },
+        { "label": "Boat / Snowmobile Dealer", "amount": 5000 }
+      ]
+    },
+    "Mississippi": { "amount": 15000, "note": "$15,000" },
+    "Missouri": { "amount": 25000, "note": "$25,000" },
+    "Montana": { "amount": 50000, "note": "$50,000" },
+    "Nebraska": { "amount": 50000, "note": "$50,000" },
+    "Nevada": { "amount": 100000, "note": "$100,000" },
+    "New Hampshire": { "amount": 25000, "note": "$25,000" },
+    "New Jersey": { "amount": 10000, "note": "$10,000" },
+    "New Mexico": { "amount": 50000, "note": "$50,000" },
+    "New York": {
+      "options": [
+        { "label": "NYC Dealer", "amount": 20000 },
+        { "label": "Dealer (outside NYC)", "amount": 10000 }
+      ]
+    },
+    "North Carolina": {
+      "options": [
+        { "label": "Main Lot", "amount": 50000 },
+        { "label": "Each Additional Lot", "amount": 25000 }
+      ]
+    },
+    "North Dakota": { "amount": 25000, "note": "$25,000" },
+    "Ohio": { "amount": 25000, "note": "$25,000" },
+    "Oklahoma": { "amount": 25000, "note": "$25,000" },
+    "Oregon": { "amount": 50000, "note": "$50,000" },
+    "Pennsylvania": { "amount": 20000, "note": "$20,000" },
+    "Rhode Island": { "amount": 50000, "note": "$50,000" },
+    "South Carolina": { "amount": 30000, "note": "$30,000" },
+    "South Dakota": { "amount": 25000, "note": "$25,000" },
+    "Tennessee": {
+      "options": [
+        { "label": "Franchise Dealer", "amount": 50000 },
+        { "label": "Used / Wholesale Dealer", "amount": 25000 }
+      ]
+    },
+    "Texas": { "amount": 50000, "note": "$50,000" },
+    "Utah": { "amount": 75000, "note": "$75,000" },
+    "Vermont": { "amount": 20000, "note": "$20,000" },
+    "Virginia": {
+      "options": [
+        { "label": "Motor Vehicle Dealer", "amount": 50000 },
+        { "label": "Motorcycle / Trailer Dealer", "amount": 25000 }
+      ]
+    },
+    "Washington": { "amount": 30000, "note": "$30,000" },
+    "West Virginia": { "amount": 25000, "note": "$25,000" },
+    "Wisconsin": { "amount": 50000, "note": "$50,000" },
+    "Wyoming": { "amount": 25000, "note": "$25,000" }
+  },
+  "Notary Bond": {
+    "Alabama": { "amount": 50000, "note": "$50,000 (4-year term)" },
+    "Alaska": { "amount": 2500, "note": "$2,500 (4-year term)" },
+    "Arizona": { "amount": 5000, "note": "$5,000 (4-year term)" },
+    "Arkansas": { "amount": 7500, "note": "$7,500 (10-year term)" },
+    "California": {
+      "options": [
+        { "label": "Standard Notary", "amount": 15000 },
+        { "label": "Remote Online Notary (RON)", "amount": 25000 }
+      ]
+    },
+    "Colorado": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Connecticut": { "amount": 0, "note": "No notary bond required" },
+    "Delaware": { "amount": 0, "note": "No notary bond required" },
+    "District of Columbia": { "amount": 2000, "note": "$2,000" },
+    "Florida": {
+      "options": [
+        { "label": "Standard Notary", "amount": 7500 },
+        { "label": "Remote Online Notary (RON)", "amount": 25000 }
+      ]
+    },
+    "Georgia": { "amount": 0, "note": "No notary bond required" },
+    "Hawaii": { "amount": 1000, "note": "$1,000 (4-year term)" },
+    "Idaho": { "amount": 10000, "note": "$10,000 (6-year term)" },
+    "Illinois": { "amount": 5000, "note": "$5,000 (4-year term)" },
+    "Indiana": { "amount": 25000, "note": "$25,000 (8-year term)" },
+    "Iowa": { "amount": 0, "note": "No notary bond required" },
+    "Kansas": { "amount": 12000, "note": "$12,000 (4-year term)" },
+    "Kentucky": { "amount": 1000, "note": "$1,000 (4-year term)" },
+    "Louisiana": { "amount": 50000, "note": "$50,000 (5-year term)" },
+    "Maine": { "amount": 0, "note": "No notary bond required" },
+    "Maryland": { "amount": 0, "note": "No notary bond required" },
+    "Massachusetts": { "amount": 0, "note": "No notary bond required" },
+    "Michigan": { "amount": 10000, "note": "$10,000 (6-year term)" },
+    "Minnesota": { "amount": 0, "note": "No notary bond required" },
+    "Mississippi": { "amount": 5000, "note": "$5,000 (4-year term)" },
+    "Missouri": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Montana": { "amount": 25000, "note": "$25,000 (4-year term)" },
+    "Nebraska": { "amount": 15000, "note": "$15,000 (4-year term)" },
+    "Nevada": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "New Hampshire": { "amount": 0, "note": "No notary bond required" },
+    "New Jersey": { "amount": 0, "note": "No notary bond required" },
+    "New Mexico": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "New York": { "amount": 0, "note": "No notary bond required" },
+    "North Carolina": { "amount": 0, "note": "No notary bond required" },
+    "North Dakota": { "amount": 7500, "note": "$7,500 (4-year term)" },
+    "Ohio": { "amount": 0, "note": "No notary bond required (except e-notaries)" },
+    "Oklahoma": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Oregon": { "amount": 0, "note": "No notary bond required" },
+    "Pennsylvania": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Rhode Island": { "amount": 0, "note": "No notary bond required" },
+    "South Carolina": { "amount": 0, "note": "No notary bond required" },
+    "South Dakota": { "amount": 0, "note": "No notary bond required (repealed 2025)" },
+    "Tennessee": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Texas": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "Utah": { "amount": 5000, "note": "$5,000 (4-year term)" },
+    "Vermont": { "amount": 0, "note": "No notary bond required" },
+    "Virginia": { "amount": 0, "note": "No notary bond required" },
+    "Washington": { "amount": 10000, "note": "$10,000 (4-year term)" },
+    "West Virginia": { "amount": 0, "note": "No notary bond required" },
+    "Wisconsin": { "amount": 500, "note": "$500 (4-year term)" },
+    "Wyoming": { "amount": 0, "note": "No notary bond required (eliminated 2021)" }
+  },
+  "Contractor License Bond": {
+    "Alabama": { "amount": 10000, "note": "$2,500–$10,000 (varies by city/county)" },
+    "Alaska": {
+      "options": [
+        { "label": "General Contractor", "amount": 25000 },
+        { "label": "Residential Contractor", "amount": 10000 },
+        { "label": "Specialty Contractor", "amount": 5000 }
+      ]
+    },
+    "Arizona": {
+      "options": [
+        { "label": "General Commercial (large)", "amount": 100000 },
+        { "label": "General Residential", "amount": 50000 },
+        { "label": "Specialty Contractor", "amount": 9000 }
+      ]
+    },
+    "Arkansas": { "amount": 10000, "note": "$10,000 minimum" },
+    "California": { "amount": 25000, "note": "$25,000 (all licensed contractors)" },
+    "Colorado": { "amount": 0, "note": "No state-level requirement (local may apply)" },
+    "Connecticut": { "amount": 0, "note": "No state-level requirement" },
+    "Delaware": { "amount": 50000, "note": "$50,000 (for jobs exceeding $50,000)" },
+    "District of Columbia": { "amount": 25000, "note": "$25,000" },
+    "Florida": { "amount": 0, "note": "No state bond (financial statement or letter of credit accepted)" },
+    "Georgia": { "amount": 0, "note": "No state-level requirement (local may apply)" },
+    "Hawaii": { "amount": 25000, "note": "$25,000" },
+    "Idaho": { "amount": 15000, "note": "$15,000 (public works)" },
+    "Illinois": { "amount": 0, "note": "No state-level requirement (Chicago requires roofing bond)" },
+    "Indiana": { "amount": 0, "note": "No state-level requirement" },
+    "Iowa": { "amount": 0, "note": "No state-level requirement" },
+    "Kansas": { "amount": 0, "note": "No state-level requirement" },
+    "Kentucky": { "amount": 0, "note": "No state-level requirement" },
+    "Louisiana": { "amount": 15000, "note": "$15,000 (residential)" },
+    "Maine": { "amount": 0, "note": "No state-level requirement" },
+    "Maryland": { "amount": 0, "note": "No state-level requirement (MHIC registration required)" },
+    "Massachusetts": { "amount": 0, "note": "No state-level requirement" },
+    "Michigan": { "amount": 0, "note": "No state-level requirement (residential builders need license)" },
+    "Minnesota": { "amount": 0, "note": "No state-level requirement" },
+    "Mississippi": {
+      "options": [
+        { "label": "Large Classification", "amount": 50000 },
+        { "label": "Small Classification", "amount": 10000 }
+      ]
+    },
+    "Missouri": { "amount": 0, "note": "No state-level requirement (local may apply)" },
+    "Montana": { "amount": 10000, "note": "$10,000" },
+    "Nebraska": { "amount": 0, "note": "No state-level requirement" },
+    "Nevada": {
+      "options": [
+        { "label": "Large Contractor (set by Board)", "amount": 500000 },
+        { "label": "Medium Contractor", "amount": 50000 },
+        { "label": "Small Contractor", "amount": 1000 }
+      ]
+    },
+    "New Hampshire": { "amount": 0, "note": "No state-level requirement" },
+    "New Jersey": {
+      "options": [
+        { "label": "General Contractor", "amount": 50000 },
+        { "label": "Specialty Contractor", "amount": 10000 }
+      ]
+    },
+    "New Mexico": { "amount": 10000, "note": "$10,000" },
+    "New York": { "amount": 0, "note": "No state-level requirement (NYC has local requirements)" },
+    "North Carolina": { "amount": 0, "note": "No state-level bond (license required)" },
+    "North Dakota": { "amount": 0, "note": "No state-level requirement" },
+    "Ohio": { "amount": 0, "note": "No state-level requirement" },
+    "Oklahoma": { "amount": 0, "note": "No state-level requirement" },
+    "Oregon": {
+      "options": [
+        { "label": "Commercial General Contractor", "amount": 80000 },
+        { "label": "Residential General Contractor", "amount": 30000 },
+        { "label": "Specialty Contractor", "amount": 20000 }
+      ]
+    },
+    "Pennsylvania": { "amount": 0, "note": "No state-level requirement" },
+    "Rhode Island": { "amount": 0, "note": "No state-level requirement" },
+    "South Carolina": {
+      "options": [
+        { "label": "General Contractor", "amount": 15000 },
+        { "label": "Mechanical Contractor", "amount": 5000 }
+      ]
+    },
+    "South Dakota": { "amount": 0, "note": "No state-level requirement" },
+    "Tennessee": { "amount": 25000, "note": "$25,000" },
+    "Texas": { "amount": 0, "note": "No state-level requirement (HVAC/electrical local bonds)" },
+    "Utah": {
+      "options": [
+        { "label": "General Contractor", "amount": 50000 },
+        { "label": "Specialty Contractor", "amount": 25000 }
+      ]
+    },
+    "Vermont": { "amount": 0, "note": "No state-level requirement" },
+    "Virginia": {
+      "options": [
+        { "label": "Class A Contractor", "amount": 50000 },
+        { "label": "Class B Contractor", "amount": 10000 }
+      ]
+    },
+    "Washington": {
+      "options": [
+        { "label": "General Contractor", "amount": 30000 },
+        { "label": "Specialty Contractor", "amount": 15000 }
+      ]
+    },
+    "West Virginia": { "amount": 0, "note": "No state-level requirement" },
+    "Wisconsin": { "amount": 0, "note": "No state-level requirement" },
+    "Wyoming": { "amount": 0, "note": "No state-level requirement" }
+  },
+  "Freight Broker Bond (BMC-84)": {
+    "_default": { "amount": 75000, "note": "$75,000 (federal requirement — same in all states)" }
+  },
+  "License & Permit Bond": {
+    "_default": { "amount": 0, "note": "Amount varies by state and specific license type. Please enter the required amount." }
+  },
+  "Court Bond": {
+    "_default": { "amount": 0, "note": "Amount set by the court. Please enter the amount specified in your court order." }
+  },
+  "ERISA / Fidelity Bond": {
+    "_default": { "amount": 0, "note": "Must cover at least 10% of plan assets handled (minimum $1,000, maximum $500,000)." }
+  },
+  "Mortgage Broker Bond": {
+    "Alabama": { "amount": 25000, "note": "$25,000" },
+    "Alaska": { "amount": 25000, "note": "$25,000" },
+    "Arizona": { "amount": 25000, "note": "$25,000" },
+    "California": { "amount": 25000, "note": "$25,000" },
+    "Colorado": { "amount": 25000, "note": "$25,000" },
+    "Florida": { "amount": 25000, "note": "$25,000" },
+    "Georgia": { "amount": 25000, "note": "$25,000" },
+    "Illinois": { "amount": 25000, "note": "$25,000" },
+    "New York": { "amount": 50000, "note": "$50,000" },
+    "Texas": { "amount": 50000, "note": "$50,000" },
+    "_default": { "amount": 25000, "note": "$25,000 (typical state requirement — verify with your state)" }
+  },
+  "Tax Preparer Bond": {
+    "California": { "amount": 5000, "note": "$5,000 (CTEC requirement)" },
+    "Oregon": { "amount": 10000, "note": "$10,000" },
+    "Maryland": { "amount": 5000, "note": "$5,000" },
+    "New York": { "amount": 5000, "note": "$5,000" },
+    "_default": { "amount": 0, "note": "Not all states require a tax preparer bond. Please check your state's requirements." }
+  },
+  "Title Bond": {
+    "_default": { "amount": 0, "note": "Typically 1.5x the vehicle's value. Please enter the required amount from your state DMV." }
+  },
+  "Wage and Welfare Bond": {
+    "_default": { "amount": 0, "note": "Amount varies based on number of employees and payroll. Please enter the required amount." }
+  },
+  "Other / Not Sure": {
+    "_default": { "amount": 0, "note": "Please enter the bond amount if known, or leave blank and we'll help determine the right amount." }
+  }
+}
