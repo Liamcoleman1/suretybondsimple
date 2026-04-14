@@ -20,61 +20,6 @@
   line-height: 1.7;
 }
 
-/* ===== MAP SECTION ===== */
-.states-map-section {
-  padding: 60px 0 20px;
-  background: #f8fafc;
-}
-
-.states-map-section h2 {
-  text-align: center;
-  font-size: 28px;
-  color: var(--blue-900);
-  margin-bottom: 30px;
-}
-
-.map-container {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-}
-
-#us-map {
-  width: 100%;
-  height: auto;
-}
-
-#us-map path {
-  fill: #dbeafe;
-  stroke: #ffffff;
-  stroke-width: 1.5;
-  cursor: pointer;
-  transition: fill 0.2s;
-}
-
-#us-map path:hover {
-  fill: #2563eb;
-}
-
-.map-tooltip {
-  position: absolute;
-  background: #1e3a8a;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.map-tooltip.visible {
-  opacity: 1;
-}
-
 /* ===== SEARCH ===== */
 .states-search-section {
   padding: 40px 0 0;
@@ -226,10 +171,6 @@
   .states-hero { padding: 60px 0 40px; }
   .states-hero h1 { font-size: 30px; }
   .states-hero p { font-size: 15px; }
-
-  .map-container { display: none; }
-  .states-map-section { padding: 20px 0 0; }
-  .states-map-section h2 { display: none; }
 
   .state-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .state-card { padding: 14px 8px; }
