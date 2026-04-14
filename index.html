@@ -36,6 +36,11 @@
       </a>
       <a href="quote.html" class="btn btn-green nav-cta">Get a Free Quote</a>
     </div>
+    <button class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
   </nav>
 
   <!-- HERO SECTION -->
@@ -171,6 +176,10 @@
       <p>&copy; 2026 SuretyBond Simple. All rights reserved.</p>
     </div>
   </footer>
-
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+</script>
 </body>
 </html>
